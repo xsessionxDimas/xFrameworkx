@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section scripts {
+    <script type="text/javascript" src="@Url.Content("~/Content/js/core/libraries/jquery_ui/interactions.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/pagination/bs_pagination.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/tables/datatables/datatables.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/datatables-basic-empty.js")"></script>
+}
+
+@section breadcrumb
+{
+    <ul class="breadcrumb">
+        <li><i class="icon-home2 position-left"></i> Master</li>
+        <li class="active">Bank</li>
+    </ul>
+}
+
+<div class="panel-body panel-parameter">
+    <div class="row" style="margin-bottom: 3px !important">
+        <div class="form-group">
+            <label class="col-lg-2 control-label" style="width: 115px; margin-top: 5px">Bank Code :</label>
+            <div class="col-lg-3">
+                <input type="text" class="form-control" id="BankCode" placeholder="Bank Code">
+            </div>
+            <label class="col-lg-2 control-label" style="width: 110px; margin-top: 5px">Bank Name :</label>
+            <div class="col-lg-3">
+                <input type="text" class="form-control" id="BankName" placeholder="Bank Name">
+            </div>
+        </div>
+    </div>
+    <div class="text-right" style="margin-bottom: 15px">
+        <button type="button" id="btn-search" class="btn btn-primary">Search <i class="icon-search4 position-right"></i></button>
+        <a href="#" class="btn btn-success"><i class="glyphicon glyphicon-plus position-left"></i> Add New</a>
+    </div>
+</div>
+
+<div id="grid-wrapper">
+    <div id="search-wrapper">
+
+    </div>
+    <div class="text-center">
+        <ul id="pager" class="pagination-separated pagination-sm twbs-separated" style="margin: 10px 0; text-align: right"></ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var searchUrl = "@Url.Action("GetBanks")";
+</script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/bank.js")"></script>

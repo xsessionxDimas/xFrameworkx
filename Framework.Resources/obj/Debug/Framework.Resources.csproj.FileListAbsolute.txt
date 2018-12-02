@@ -1,0 +1,5 @@
+G:\MyFramework\xFrameworkx\Framework.Resources\bin\Debug\Framework.Resources.dll
+G:\MyFramework\xFrameworkx\Framework.Resources\bin\Debug\Framework.Resources.pdb
+G:\MyFramework\xFrameworkx\Framework.Resources\obj\Debug\Framework.Resources.csprojResolveAssemblyReference.cache
+G:\MyFramework\xFrameworkx\Framework.Resources\obj\Debug\Framework.Resources.dll
+G:\MyFramework\xFrameworkx\Framework.Resources\obj\Debug\Framework.Resources.pdb

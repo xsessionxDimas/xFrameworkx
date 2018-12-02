@@ -1,0 +1,7 @@
+G:\MyFramework\xFrameworkx\Framework.Core\bin\Debug\Framework.Core.dll
+G:\MyFramework\xFrameworkx\Framework.Core\bin\Debug\Framework.Core.pdb
+G:\MyFramework\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.csprojResolveAssemblyReference.cache
+G:\MyFramework\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.dll
+G:\MyFramework\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.pdb
+G:\MyFramework\xFrameworkx\Framework.Core\bin\Debug\Framework.Utility.dll
+G:\MyFramework\xFrameworkx\Framework.Core\bin\Debug\Framework.Utility.pdb

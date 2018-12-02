@@ -1,0 +1,25 @@
+﻿@model Framework.Utility.Paging.PagedList<Framework.Core.DTO.BankDTO>
+@{
+    var count = 1;
+}
+
+<span style="display: none" id="total-page">@Model.PageCount</span>
+<table class="table datatable-empty table-striped table-bordered" id="member" style="width: 99.9%">
+    <thead style="background: gainsboro">
+        <tr>
+            <th>No.</th>
+            <th>Bank Code</th>
+            <th>Bank Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bank in Model)
+        {
+            <tr>
+                <td>@(count++)</td>
+                <td>@bank.BankCode</td>
+                <td>@bank.BankName</td>
+            </tr>
+        }
+    </tbody>
+</table>

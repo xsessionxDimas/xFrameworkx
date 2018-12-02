@@ -1,0 +1,14 @@
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Repository.dll.config
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Repository.dll
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Repository.pdb
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\EntityFramework.dll
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\EntityFramework.SqlServer.dll
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Core.dll
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Core.pdb
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\EntityFramework.xml
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\EntityFramework.SqlServer.xml
+G:\MyFramework\xFrameworkx\Framework.Repository\obj\Debug\Framework.Repository.csprojResolveAssemblyReference.cache
+G:\MyFramework\xFrameworkx\Framework.Repository\obj\Debug\Framework.Repository.dll
+G:\MyFramework\xFrameworkx\Framework.Repository\obj\Debug\Framework.Repository.pdb
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Utility.dll
+G:\MyFramework\xFrameworkx\Framework.Repository\bin\Debug\Framework.Utility.pdb
