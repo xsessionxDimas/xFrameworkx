@@ -22,6 +22,11 @@ namespace Framework.WebUI.Controllers
         {
             var result = await Task.Run(() => bankService.SearchBanks(code, name, page, pageSize));
             return PartialView("ListBanks", result);
-        } 
+        }
+
+        public async Task<ActionResult> SetBankDeleted(int id)
+        {
+            
+        }
     }
 }

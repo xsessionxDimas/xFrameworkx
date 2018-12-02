@@ -59,5 +59,12 @@ namespace Framework.Core.Model.Base
         {
             return Id.GetHashCode();
         }
+
+        public void MarkAsDeleted(string user)
+        {
+            IsDelete    = true;
+            UpdatedBy   = user;
+            UpdatedDate = DateTime.Now;
+        }
     }
 }

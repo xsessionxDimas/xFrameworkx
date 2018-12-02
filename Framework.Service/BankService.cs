@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
@@ -91,6 +90,38 @@ namespace Framework.Service
             }
         }
 
+        public void DeleteBank(int id, string user)
+        {
+            try
+            {
+
+                using (var unitOfWork = unitOfWorkManager.NewUnitOfWork())
+                {
+                    try
+                    {
+                        var bank = bankRepository.FindById(id);
+                        bank.MarkAsDeleted(user);
+                        bankRepository.Add(bank);
+                        unitOfWork.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        unitOfWork.Rollback();
+                        throw;
+                    }
+                }
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                var sb = new StringBuilder();
+                foreach (var validationError in dbEx.EntityValidationErrors.SelectMany(entityValidationErrors => entityValidationErrors.ValidationErrors))
+                {
+                    sb.Append("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                }
+                throw new Exception(sb.ToString());
+            }
+        }
+
         public BankDTO SearchBankById(int id)
         {
             var bank = bankRepository.FindOne(new BankByIdSpec(id));
@@ -99,7 +130,7 @@ namespace Framework.Service
 
         public async Task<PagedList<BankDTO>> SearchBanks(string code, string name, int page, int pageSize)
         {
-            ISpecification<Bank> specification = new AllBankSpec();
+            ISpecification<Bank> specification = new ActiveBankSpec();
             if (!string.IsNullOrEmpty(code))
                 specification   = specification.And(new BankByCodeSpec(code));
             if (!string.IsNullOrEmpty(name))

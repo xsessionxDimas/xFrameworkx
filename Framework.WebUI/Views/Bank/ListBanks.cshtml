@@ -7,9 +7,10 @@
 <table class="table datatable-empty table-striped table-bordered" id="member" style="width: 99.9%">
     <thead style="background: gainsboro">
         <tr>
-            <th>No.</th>
-            <th>Bank Code</th>
+            <th style="width: 80px  !important">No.</th>
+            <th style="width: 120px !important">Bank Code</th>
             <th>Bank Name</th>
+            <th style="width: 180px !important">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -19,6 +20,10 @@
                 <td>@(count++)</td>
                 <td>@bank.BankCode</td>
                 <td>@bank.BankName</td>
+                <td class="text-center" style="width: 204px !important">
+                    <a href="#" class="btn btn-primary btn-sm"><i class="icon-pencil3"></i> Update</a>
+                    <a href="#" class="btn btn-danger  btn-sm"><i class="icon-bin"></i> Delete</a>
+                </td>
             </tr>
         }
     </tbody>

@@ -3,8 +3,8 @@
 jQuery(function () {
     jQuery('#btn-search').on('click', function () {
         firstPageClick = true;
-        var code = jQuery('#BankCode').val();
-        var name = jQuery('#BankName').val();
+        var code = encodeURIComponent(jQuery('#BankCode').val());
+        var name = encodeURIComponent(jQuery('#BankName').val());
         searchBank(code, name, null, true);
     });
     jQuery('#btn-search').click();
@@ -32,8 +32,9 @@ function createPaging(recreate) {
                 firstPageClick = false;
                 return;
             }
-            var code = jQuery('#BankCode').val();
-            var name = jQuery('#BankName').val();
+            console.log('call');
+            var code = encodeURIComponent(jQuery('#BankCode').val());
+            var name = encodeURIComponent(jQuery('#BankName').val());
             searchUser(code, name, page, false);
         }
     });
