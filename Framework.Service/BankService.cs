@@ -28,7 +28,7 @@ namespace Framework.Service
             this.mapper            = mapper;
         }
 
-        public void CreateNewBank(string bankCode, string bankName)
+        public void CreateNewBank(string bankCode, string bankName, string createdBy)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace Framework.Service
                 {
                     try
                     {
-                        var bank = new Bank(bankCode, bankName, null, false, "System", DateTime.Now, null, null);
+                        var bank = new Bank(bankCode, bankName, null, false, createdBy, DateTime.Now, null, null);
                         bankRepository.Add(bank);
                         unitOfWork.Commit();
                     }
@@ -90,7 +90,7 @@ namespace Framework.Service
             }
         }
 
-        public void DeleteBank(int id, string user)
+        public void DeleteBank(int id, string updatedBy)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace Framework.Service
                     try
                     {
                         var bank = bankRepository.FindById(id);
-                        bank.MarkAsDeleted(user);
+                        bank.MarkAsDeleted(updatedBy);
                         bankRepository.Add(bank);
                         unitOfWork.Commit();
                     }

@@ -11,6 +11,7 @@ namespace Framework.Repository.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new AuditTrailMappingConfiguration());
             modelBuilder.Configurations.Add(new BankMappingConfiguration());
             modelBuilder.Configurations.Add(new BankBranchMappingConfiguration());
         }

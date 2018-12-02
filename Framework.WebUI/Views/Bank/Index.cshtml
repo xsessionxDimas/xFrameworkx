@@ -33,7 +33,7 @@
     </div>
     <div class="text-right" style="margin-bottom: 15px">
         <button type="button" id="btn-search" class="btn btn-primary">Search <i class="icon-search4 position-right"></i></button>
-        <a href="#" class="btn btn-success"><i class="glyphicon glyphicon-plus position-left"></i> Add New</a>
+        <a href="@Url.Action("AddNewBank")" class="btn btn-success"><i class="glyphicon glyphicon-plus position-left"></i> Add New</a>
     </div>
 </div>
 
@@ -47,5 +47,6 @@
 </div>
 <script type="text/javascript">
     var searchUrl = "@Url.Action("GetBanks")";
+    var deleteUrl = "@Url.Action("SetBankDeleted")";
 </script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/bank.js")"></script>

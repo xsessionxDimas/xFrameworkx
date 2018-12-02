@@ -1,5 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Mvc;
+using Framework.Core.DTO;
 using Framework.Core.Interface.Service;
 
 namespace Framework.WebUI.Controllers
@@ -24,9 +27,50 @@ namespace Framework.WebUI.Controllers
             return PartialView("ListBanks", result);
         }
 
-        public async Task<ActionResult> SetBankDeleted(int id)
+        public ViewResult AddNewBank()
         {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddNewBank(BankDTO model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+            try
+            {
+                model.SetCreateNewLog("System");
+                bankService.CreateNewBank(model.BankCode, model.BankName, "Dimas");
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                AddErrors(new[] { ex.Message });
+                return View(model);
+            }
             
+        }
+
+        private void AddErrors(IEnumerable<string> errors)
+        {
+            foreach (var error in errors)
+            {
+                ModelState.AddModelError("", error);
+            }
+        }
+
+        public async Task<JsonResult> SetBankDeleted(int id)
+        {
+            try
+            {
+                await Task.Run(() => bankService.DeleteBank(id, "SYSTEM"));
+                return Json("OK", JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(ex.Message, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

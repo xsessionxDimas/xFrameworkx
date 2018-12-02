@@ -32,12 +32,12 @@ function createPaging(recreate) {
                 firstPageClick = false;
                 return;
             }
-            console.log('call');
             var code = encodeURIComponent(jQuery('#BankCode').val());
             var name = encodeURIComponent(jQuery('#BankName').val());
             searchUser(code, name, page, false);
         }
     });
+    return false;
 }
 
 function searchBank(code, name, page, recreatePaging) {
@@ -49,8 +49,30 @@ function searchBank(code, name, page, recreatePaging) {
     jQuery("#search-wrapper").load(url, function () {
         jQuery('.datatable-empty').DataTable();
         createPaging(recreatePaging);
+        registerBtnDelete();
         unblockUI();
     });
+}
+
+function registerBtnDelete() {
+    jQuery('.btn-delete').on('click', function() {
+        var id = jQuery(this).attr('id-value');
+        DeleteBank(id);
+    });
+}
+
+function DeleteBank(id) {
+    jQuery.ajax({
+        method  : "GET",
+        url     : deleteUrl + "/" + id
+    })
+    .done(function() {
+        jQuery('#btn-search').click();
+     })
+    .fail(function(data) {
+        console.log(data);
+    });
+    return false;
 }
 
 function blockUI() {

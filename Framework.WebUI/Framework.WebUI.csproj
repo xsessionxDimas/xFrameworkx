@@ -828,6 +828,7 @@
     <Content Include="Content\js\core\libraries\jquery_ui\interactions.min.js" />
     <Content Include="Content\js\core\libraries\jquery_ui\touch.min.js" />
     <Content Include="Content\js\core\libraries\jquery_ui\widgets.min.js" />
+    <Content Include="Content\js\form_validation.js" />
     <Content Include="Content\js\maps\google\basic\basic.js" />
     <Content Include="Content\js\maps\google\basic\click_event.js" />
     <Content Include="Content\js\maps\google\basic\coordinates.js" />
@@ -1168,6 +1169,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bank.js" />
+    <Content Include="Scripts\core-app.js" />
     <Content Include="Scripts\datatables-basic-empty.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1201,6 +1203,7 @@
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Bank\Index.cshtml" />
     <Content Include="Views\Bank\ListBanks.cshtml" />
+    <Content Include="Views\Bank\AddNewBank.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

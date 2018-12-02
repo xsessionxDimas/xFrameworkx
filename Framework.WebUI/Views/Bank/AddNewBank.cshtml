@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "AddNewBank";
+    Layout        = "~/Views/Shared/Layout.cshtml";
+}
+
+@section scripts {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/core-app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/form_validation.js")"></script>
+}
+
+@section breadcrumb
+{
+    <ul class="breadcrumb">
+        <li><i class="icon-home2 position-left"></i> Master</li>
+        <li class="active">Add New Bank</li>
+    </ul>
+}
+
+
+@using (Html.BeginForm("AddNewBank", "Bank", FormMethod.Post, new { @class = "form-horizontal form-validate-jquery" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-12" style="padding-left: 0; padding-right: 0">
+        <div class="panel panel-flat panel-parameter" style="margin-bottom: 60px">
+            <div class="panel-body">
+                <fieldset class="content-group">
+                    <legend class="text-bold">New Bank Form</legend>
+                    <!-- Code text input -->
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">Bank Code <span class="text-danger">*</span></label>
+                        <div class="col-lg-4">
+                            <input type="text" name="BankCode" class="form-control" required="required" placeholder="Enter Bank Code">
+                        </div>
+                    </div>
+                    <!-- Name text input -->
+                    <div class="form-group">
+                        <label class="control-label col-lg-3">Bank Name <span class="text-danger">*</span></label>
+                        <div class="col-lg-4">
+                            <input type="text" name="BankName" class="form-control" required="required" placeholder="Enter Bank Name">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="text-right" style="margin-bottom: 20px">
+                    <a href="@Url.Action("Index")" class="btn btn-default">Bank <i class="icon-arrow-left12 position-right"></i></a>
+                    <button type="reset"  class="btn btn-default reset" id="reset">Reset <i class="icon-reload-alt position-right"></i></button>
+                    <button type="submit" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

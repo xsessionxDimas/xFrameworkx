@@ -60,7 +60,7 @@
     <Compile Include="Model\Base\BaseEntity.cs" />
     <Compile Include="Model\BankBranch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specification\AllBankSpec.cs" />
+    <Compile Include="Specification\ActiveBankSpec.cs" />
     <Compile Include="Specification\BankByCodeSpec.cs" />
     <Compile Include="Specification\BankByIdSpec.cs" />
     <Compile Include="Specification\BankByNameSpec.cs" />
