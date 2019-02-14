@@ -30,11 +30,11 @@ namespace Framework.Repository.Repositories
             return query.Where(spec.ToExpression()).SingleOrDefault();
         }
 
-        public IQueryable<Core.Model.Bank> Find(ISpecification<Core.Model.Bank> spec, string[] includes)
+        public IQueryable<Core.Model.Bank> Find(ISpecification<Core.Model.Bank> spec, string[] includes, bool isAscending = false)
         {
             var query = GetEntities().AsQueryable();
             if (includes != null) query = includes.Aggregate(query, (current, include) => current.Include(include));
-            return query.Where(spec.ToExpression()).OrderByDescending(o => o.Id);
+            return isAscending ? query.Where(spec.ToExpression()).OrderBy(o => o.Id) : query.Where(spec.ToExpression()).OrderByDescending(o => o.Id);
         }
 
         public void Add(Core.Model.Bank entity)
@@ -57,7 +57,7 @@ namespace Framework.Repository.Repositories
 
         public int Count(ISpecification<Core.Model.Bank> spec, string[] includes)
         {
-            return Find(spec, includes).Count();
+            return GetEntities().Count(spec.ToExpression());
         }
     }
 }

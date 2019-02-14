@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xFrameworkx</title>
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/css/icons/icomoon/styles.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/css/bootstrap.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/css/core.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/css/components.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/css/colors.css")" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .multiselect-container > li {
+            padding: 0px 7px;
+        }
+
+        .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+            padding: 5px 5px;
+        }
+
+        .table-borderless td, .table-borderless th {
+            border: 0;
+        }
+
+        .dataTables_wrapper {
+            margin: 0 5px;
+        }
+
+        .datatable-basic, .datatable-empty {
+            border-left: 1px solid #ddd !important;
+            border-right: 1px solid #ddd !important;
+            border-bottom: 1px solid #ddd !important;
+        }
+    </style>
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/loaders/pace.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/core/libraries/jquery.min.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/Content/js/core/libraries/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/loaders/blockui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/ui/moment/moment.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/core/libraries/jquery_ui/interactions.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/pickers/daterangepicker.js")"></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="@Url.Content("~/Content/js/plugins/ui/prism.min.js")"></script>
+    @RenderSection("scripts", false)
+    <script type="text/javascript" src="@Url.Content("~/Content/js/core/app.js")"></script>
+    <!-- /theme JS files -->
+</head>
+<body class="pace-done">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">xFrameworkx UI</a>
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-container">
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- /main sidebar -->
+            <div class="content-wrapper" id="main-wrapper" style="padding:10px">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

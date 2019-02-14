@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core", "Framework.Core\Framework.Core.csproj", "{EFE28FC1-A591-49B5-B957-A6383CC86939}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Resources", "Framework.Resources\Framework.Resources.csproj", "{F935A0DB-4FB6-49E0-9053-E76FF00B5AB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.WebUI", "Framework.WebUI\Framework.WebUI.csproj", "{DC781D15-0FB8-4E6E-A413-89A1066B28FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Auth", "Framework.Auth\Framework.Auth.csproj", "{ABAE5BAE-74D0-4BF7-9DD5-F1F241748736}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,8 +53,15 @@ Global
 		{DC781D15-0FB8-4E6E-A413-89A1066B28FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC781D15-0FB8-4E6E-A413-89A1066B28FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC781D15-0FB8-4E6E-A413-89A1066B28FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAE5BAE-74D0-4BF7-9DD5-F1F241748736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAE5BAE-74D0-4BF7-9DD5-F1F241748736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAE5BAE-74D0-4BF7-9DD5-F1F241748736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAE5BAE-74D0-4BF7-9DD5-F1F241748736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62DA24AD-1593-451D-AE77-A263B2C16AE4}
 	EndGlobalSection
 EndGlobal

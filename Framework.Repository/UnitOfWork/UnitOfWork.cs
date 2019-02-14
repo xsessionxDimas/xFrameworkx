@@ -9,7 +9,6 @@ using System.Linq;
 using Framework.Core.Interface.Repository;
 using Framework.Core.Interface.Service;
 using Framework.Core.Interface.UnitOfWork;
-using Framework.Core.Model;
 using Framework.Repository.AuditTrail;
 
 namespace Framework.Repository.UnitOfWork

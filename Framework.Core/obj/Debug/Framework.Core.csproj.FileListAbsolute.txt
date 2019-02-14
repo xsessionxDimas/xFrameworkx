@@ -5,3 +5,12 @@ G:\MyFramework\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.dll
 G:\MyFramework\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.pdb
 G:\MyFramework\xFrameworkx\Framework.Core\bin\Debug\Framework.Utility.dll
 G:\MyFramework\xFrameworkx\Framework.Core\bin\Debug\Framework.Utility.pdb
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\bin\Debug\Framework.Core.dll
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\bin\Debug\Framework.Core.pdb
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\bin\Debug\Framework.Utility.dll
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\bin\Debug\Framework.Utility.pdb
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.csprojAssemblyReference.cache
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.csproj.CoreCompileInputs.cache
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.csproj.CopyComplete
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.dll
+C:\Users\dimas.p\source\repos\xFrameworkx\Framework.Core\obj\Debug\Framework.Core.pdb
