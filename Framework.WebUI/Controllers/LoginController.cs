@@ -13,7 +13,7 @@ namespace Framework.WebUI.Controllers
         public ActionResult PostLogin(string code)
         {
             var googleAuthenticator = new Auth.GoogleAuth();
-            var googleProfile       = googleAuthenticator.AuthWithGoogle(code, @"http://localhost:10552/Login/PostLogin");
+            var googleProfile       = googleAuthenticator.AuthWithGoogle(code, @"http://localhost:1025/Login/PostLogin");
             return RedirectToAction("Index", "Bank");
         }
     }

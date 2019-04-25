@@ -47,7 +47,7 @@ namespace Framework.Repository.AuditTrail
 
         private IEnumerable<Core.Model.AuditTrail> SetAddedProperties(DbEntityEntry entry)
         {
-            var audit = new Core.Model.AuditTrail(AuditAction.Create, GetTableName(entry), GetKeyValue(entry));
+            var audit        = new Core.Model.AuditTrail(AuditAction.Create, GetTableName(entry), GetKeyValue(entry));
             var keyValuePair = new List<string>();
             foreach (var propertyName in entry.CurrentValues.PropertyNames)
             {
@@ -68,8 +68,8 @@ namespace Framework.Repository.AuditTrail
 
         private IEnumerable<Core.Model.AuditTrail> SetDeletedProperties(DbEntityEntry entry)
         {
-            var audit = new Core.Model.AuditTrail(AuditAction.Delete, GetTableName(entry), GetKeyValue(entry));
-            var dbValues = entry.GetDatabaseValues();
+            var audit        = new Core.Model.AuditTrail(AuditAction.Delete, GetTableName(entry), GetKeyValue(entry));
+            var dbValues     = entry.GetDatabaseValues();
             var keyValuePair = (from propertyName in dbValues.PropertyNames let oldVal = dbValues[propertyName] where oldVal != null let key = propertyName let value = oldVal.GetType().Name.Equals("Byte[]", StringComparison.CurrentCultureIgnoreCase) ? "BinaryAttachment" : oldVal.ToString() select $"{key}:{value}").ToList();
             foreach (var newVal in from propertyName in entry.OriginalValues.PropertyNames let newVal = entry.OriginalValues[propertyName] where newVal != null where TypicalUpdatedByNaming.Contains(propertyName, StringComparer.CurrentCultureIgnoreCase) select newVal)
             {
@@ -83,11 +83,11 @@ namespace Framework.Repository.AuditTrail
 
         private IEnumerable<Core.Model.AuditTrail> SetModifiedProperties(DbEntityEntry entry)
         {
-            var audit = new Core.Model.AuditTrail(AuditAction.Update, GetTableName(entry), GetKeyValue(entry));
-            var dbValues = entry.GetDatabaseValues();
+            var audit        = new Core.Model.AuditTrail(AuditAction.Update, GetTableName(entry), GetKeyValue(entry));
+            var dbValues     = entry.GetDatabaseValues();
             var keyValuePair = (from propertyName in dbValues.PropertyNames let oldVal = dbValues[propertyName] where oldVal != null let key = propertyName let value = oldVal.GetType().Name.Equals("Byte[]", StringComparison.CurrentCultureIgnoreCase) ? "BinaryAttachment" : oldVal.ToString() select $"{key}:{value}").ToList();
             audit.SetOldValue(string.Join(";", keyValuePair));
-            keyValuePair = new List<string>();
+            keyValuePair     = new List<string>();
             foreach (var propertyName in entry.CurrentValues.PropertyNames)
             {
                 var newVal = entry.CurrentValues[propertyName];

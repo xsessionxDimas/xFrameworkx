@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Framework.Core.Interface.Specification;
 
 namespace Framework.Core.Interface.Repository
@@ -11,5 +12,9 @@ namespace Framework.Core.Interface.Repository
         void Add(TEntity entity);
         void Remove(TEntity entity);
         int Count(ISpecification<TEntity> spec, string[] includes = null);
+
+        IEnumerable<TEntity> QueryProcedure(string procedureName, IDictionary<string, object> parameter);
+        int QueryProcedureRecordCount(string procedureName, IDictionary<string, object> parameter);
+        void NonQueryProcedure(string procedureName, IDictionary<string, object> parameter);
     }
 }

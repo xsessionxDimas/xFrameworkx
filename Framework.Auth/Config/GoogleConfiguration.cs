@@ -2,7 +2,7 @@
 {
     public class GoogleConfiguration
     {
-        public const string GOOGLE_CLIENT_ID      = "484533141717-ih0ih2e1thtr29n8oee1hrce3991fle3.apps.googleusercontent.com"; // Replace this with your Client ID
-        public const string GOOGLE_CLIENT_SECRECT = "CV1DL3KFldERzvDko7VGEUS6";                                                 // Replace this with your Client Secret
+        public const string GOOGLE_CLIENT_ID      = "120645671190-153q1mktqutju297o3bqrl3uujichm2h.apps.googleusercontent.com"; // Replace this with your Client ID
+        public const string GOOGLE_CLIENT_SECRECT = "WgcfLoRI0Vp_d6TbDSaSsCtg";                                                 // Replace this with your Client Secret
     }
 }
