@@ -34,7 +34,7 @@ function createPaging(recreate) {
             }
             var code = encodeURIComponent(jQuery('#BankCode').val());
             var name = encodeURIComponent(jQuery('#BankName').val());
-            searchUser(code, name, page, false);
+            searchBank(code, name, page, false);
         }
     });
     return false;
